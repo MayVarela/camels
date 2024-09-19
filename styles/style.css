@@ -1,0 +1,230 @@
+/*Variables*/
+:root {
+/* Paleta de colores */
+/* Color Camel */
+--color-primario: #C19A6B;
+/* Color Oro*/
+--color-secundario: #F7DC6F;
+/* Color Blanco */
+--color-terciario: #FFFFFF;
+/* Color Verde Oliva*/
+--color-verde-oliva: #808000;
+/* Color Azul Marino*/
+--color-azul-marino: #000080;
+/*Color head and footer*/
+--color-head-footer: #194029;
+/* Tipografía */
+/* Fuente principal */
+--fuente-principal: 'Lato', sans-serif;
+/* Fuente secundaria*/
+--fuente-secundaria: 'Monserrat', sans-serif;
+/* Tamaño de fuente textos */
+--tamano-de-fuente: 16px;
+}
+
+body{
+    background-color: var(--color-primario);
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    min-height: 100hv;
+}
+
+/*Estilos del header completo*/
+header{
+    background-color: var(--color-head-footer);
+    color: var(--color-secundario);
+}
+/*Cabezera con nombre de la marca*/
+.headerMarca{
+    padding: 2% 5% 0.5%;
+}
+.h1_marca{
+    margin: 0;
+}
+/*Navegador  de paginas del header*/
+.navMenu {
+    background-color: var(--color-primario);
+    display: flex;
+    padding: 1% 4% 1% 4%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navMenu a{
+    color: var(--color-secundario);
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+    font-size: 1rem;
+    font-family: var(--fuente-principal);
+}
+/* lista del menu de accesorios*/
+.containerMenu{
+    width: auto;
+    border:  black solid 2px;
+    border-radius: 10px;
+} 
+.menuLista {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    align-items: center;
+    padding: 1% 2% 1%;
+    margin: 0;
+    gap: 30px;
+}
+.btn {
+    margin: 0;
+    padding: 0;
+}
+/*Estilos del boton que abre el menu*/
+.dropdown-btn {
+    display: none;
+}
+
+/*cuerpo completo*/
+main{
+    padding: 0% 0% 5%;
+}
+/*Seccion donde esta el buscador de productos por texto*/
+.sectionBuscar {
+    background-color: var(--color-terciario);
+    padding: 1% 0 1% 5%;
+    margin: 0;
+    display: flex;
+    gap: 25%;
+}
+/*Titulo que señala la pagina que se encuentra*/
+.tituloCategoria {
+    color: var(--color-head-footer);
+    font-size: 4rem;
+    font-weight: lighter;
+    margin: 0;
+    padding: 0;
+}
+/*Titulo del medio*/
+.h2_containerTituloBuscador{
+    margin: 0;
+}
+/*Caja del buscador de texto de la derecha*/
+.containerBuscador {
+    display: flex;
+    align-items: center;
+    gap: 15%;
+}
+
+/*mensaje arriba del carrusel*/
+.mensajeLeyenda {
+    justify-content: center;
+    display: flex;
+    color: var(--color-verde-oliva);
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    padding: 2%;
+}
+
+/*carrusel*/
+.slideshow-container {
+    position:relative;
+    max-width: 1000px;
+    margin: auto;
+    padding: 0% 0% 0% 5%;
+    overflow: hidden;
+    display: flex;
+    gap: 10px;
+}
+.mySlides {
+    display: none;
+    width: 30%;
+    background-color: var(--color-terciario);
+    border-radius: 25px;
+}
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 5px;
+    margin-top: -22px;
+    color: rgb(122, 119, 119);
+    font-weight: bold;
+    font-size: 38px;
+    transition: 0.8s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+.prev{
+    left: 0;
+    border-radius: 3px 0 0 3px;
+}
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+.text {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+}
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+.active, .dot:hover {
+    background-color: #717171;
+}
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+@keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+}
+/*Imagenes carrusel*/
+.imgAnillo{
+    width: 300px;
+    height: 300px;
+    border-radius: 25px 25px 0px 0px;
+}
+
+.footer{
+    background-color: var(--color-head-footer);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    padding: auto;
+}
+/*imagenes footer*/
+.imagenesFooter {
+    width: 30px;
+}
+/*Diseño responsivo para telefono*/
+@media (max-width: 768px) {
+    .menu {
+        display: none;
+        flex-direction: column;
+    }
+
+    .dropdown-btn {
+        display: block;
+    }
+
+    .dropdown-btn.active + .menu {
+        display: flex;
+    }
+}
