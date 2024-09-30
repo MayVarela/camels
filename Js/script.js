@@ -1,12 +1,15 @@
 // Selecciona el boton desplegable
 const dropdownBtn = document.querySelector('.dropdown-btn');
+const menuListaBuscador = document.querySelector('.menuListaBuscador');
 
 // Añade un evento de clic al botón
 dropdownBtn.addEventListener('click', function() {
-    //Alterna la clase "active" en el botón
+    //Alterna la clase "active" en el botón y el contenedor del menu
     this.classList.toggle('active');
+    menuListaBuscador.classList.toggle('active');
 });
 
+//Carrusel
 let slideIndex = 1;
 showSlides(slideIndex);
 

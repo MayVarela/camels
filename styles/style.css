@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Montez&display=swap');
 /*Variables*/
 :root {
 /* Paleta de colores */
@@ -68,6 +69,9 @@ header{
     border:  black solid 2px;
     border-radius: 10px;
 } 
+.containerMenu.active{
+    display: block;
+}
 .menuLista {
     display: flex;
     flex-direction: row;
@@ -77,9 +81,14 @@ header{
     margin: 0;
     gap: 30px;
 }
-.btn {
+.btnMenu {
     margin: 0;
     padding: 0;
+}
+.btnMenu:hover {
+    background-color: var(--color-head-footer);
+    border-radius: 5px;
+    padding: 4px;
 }
 /*Estilos del boton que abre el menu*/
 .dropdown-btn {
@@ -88,41 +97,102 @@ header{
 
 /*cuerpo completo*/
 main{
-    padding: 0% 0% 5%;
+    padding: 0%;
 }
 /*Seccion donde esta el buscador de productos por texto*/
 .sectionBuscar {
     background-color: var(--color-terciario);
-    padding: 1% 0 1% 5%;
-    margin: 0;
+    padding: 1% 5% 0.5% 5%;
+    width: auto;
     display: flex;
-    gap: 25%;
+    flex-direction: column;
+}
+.containerHorizontalTitulos{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
 }
 /*Titulo que señala la pagina que se encuentra*/
 .tituloCategoria {
     color: var(--color-head-footer);
-    font-size: 4rem;
     font-weight: lighter;
+    font-size: 2vw;
     margin: 0;
-    padding: 0;
+    padding: 2%;
+}
+/*segundo menu de la seccion debajo del header*/
+.containerTituloCategoria{
+    display: flex;
+}
+.menu2{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+.menu2 a{
+    font-style: italic;
+    font-size: 1.6vw;
+    text-decoration: none;
+    color: var(--color-verde-oliva);
+    margin: 0.2%;
 }
 /*Titulo del medio*/
 .h2_containerTituloBuscador{
     margin: 0;
+    text-align: center;
+    color: var(--color-head-footer);
+}
+.tituloBuscador{
+    font-size: 2vw;
 }
 /*Caja del buscador de texto de la derecha*/
 .containerBuscador {
     display: flex;
     align-items: center;
-    gap: 15%;
+    background-color: rgb(212, 234, 243);
+    padding: .5% 2% .5% 2%;
+    border-radius: 15px;
+    width: auto;
 }
-
-/*mensaje arriba del carrusel*/
+.menuListaBuscador{
+    display: none;
+    flex-direction: column;
+    list-style: none;
+}
+.menuListaBuscador a{
+    text-decoration: none;
+    color: var(--color-azul-marino);
+}
+.formBuscador{
+    display: flex;
+    width: 60%;
+    
+}
+.inputBuscador{
+    border: none;
+    border-radius: 15px;
+    padding: 10%;
+    background-color: transparent;
+}
+.btnBuscador{
+    background-color: transparent;
+    border: none;
+}
+.dropdown-btnBuscador{
+    display: flex;
+}
+/*mensaje abajo del carrusel*/
 .mensajeLeyenda {
     justify-content: center;
     display: flex;
     color: var(--color-verde-oliva);
-    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-family: "Montez", cursive;
+    font-size: 2rem;
+    padding: 0%;
+}
+/*Contenedor del carrusel*/
+.containerCarrusel{
     padding: 2%;
 }
 
@@ -194,20 +264,57 @@ main{
     from {opacity: .4} 
     to {opacity: 1}
 }
-/*Imagenes carrusel*/
-.imgAnillo{
-    width: 300px;
-    height: 300px;
-    border-radius: 25px 25px 0px 0px;
+/*Descripcion de los productos*/
+.mySlides p{
+    color: var(--color-verde-oliva);
+    font-size: 18px;
+    padding: 0% 0% 0% 5%;
 }
-
+.mySlides h3{
+    color: var(--color-azul-marino);
+    padding: 0% 0% 0% 5%;
+}
 .footer{
     background-color: var(--color-head-footer);
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction:row;
+    padding: 0% 15% 0% 15%;
+    color: var(--color-secundario);
+}
+.containerFooterContacto{
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+}
+.containerFooterContacto p{
+    display: flex;
+    font-size: 1rem;
+}
+.containerFooterPagos{
+    display: flex;
+    width: 10vw;
     align-items: center;
     justify-content: center;
-    flex-direction: row;
-    padding: auto;
+}
+.containerFooterPagos p{
+    padding: 0% 20% 0% 0%;
+    display: flex;
+    width: 1rem;
+}
+.containerFooterPagos img{
+    display: flex;
+    width: 40%;
+}
+.containerFooterAuthor{
+    display: flex;
+    align-items: center;
+    width: auto;
+}
+.containerFooterAuthor p{
+    display: flex;
 }
 /*imagenes footer*/
 .imagenesFooter {
@@ -215,16 +322,88 @@ main{
 }
 /*Diseño responsivo para telefono*/
 @media (max-width: 768px) {
-    .menu {
-        display: none;
-        flex-direction: column;
+    .h2_containerTituloBuscador{
+        width: 33%;
+        padding: 0% 15% 0% 15%;
     }
-
-    .dropdown-btn {
+    .containerBuscador{
+        width: 40%;
+        padding: 0% 5% 0% 5%;
+    }
+    .containerBotonMenuBuscador{
         display: block;
+        width: 14%;
+        padding: 0;
     }
-
-    .dropdown-btn.active + .menu {
+    .containerMenuBuscador{
         display: flex;
+        padding: 0;
+        flex-direction: column;
+        position: absolute;
+        z-index: 1000;
+    }
+    .formBuscador{
+        padding: 0;
+        width: 130px;
+    }
+    .inputBuscador{
+        width: 100%;
+    }
+    .dropdown-btn {
+        display: flex;
+        width: 100px;
+        background-color: transparent;
+        border: none;
+    }
+    .dropdown-btn img{
+        display: block;
+        width: 30px;
+        height: auto;
+    }
+    
+    .containerMenu{
+        display: none;
+    }
+    .menuListaBuscador.active{
+        display: block;
+        background-color: rgb(212, 234, 243);
+        position:fixed;
+        border-radius: 15px;
+        
+        padding: 3%;
+    }
+    .btnMenu:hover {
+        background-color:white;
+        border-radius: 5px;
+        padding: 4px;
+    }
+    
+
+    .dropdown-btn.active + .menuLista {
+        display: flex;
+    }
+    .botonDesplegableMenu{
+        width: 100%;
+    }
+    .imgAnillo{
+        width: 10%;
+        height: 5%;
+    }
+    .mySlides p{
+        font-size: 2vw;
+        padding: 0% 1% 40% 8%;
+    }
+    .mySlides h3{
+        font-size: 1rem;
+        padding: 0% 0% 0% 5%;
+    }
+    .footer{
+        background-color: var(--color-head-footer);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: row;
+        padding: 0% 5% 0% 5%;
+        color: var(--color-secundario);
     }
 }

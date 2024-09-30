@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Joyeria Camels</title>
+    <link rel="stylesheet" href="/styles/style.css" />
+    <link rel="stylesheet" href="styles/home.css" />
+    <link rel="stylesheet" href="styles/galerias.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montez&display=swap"
+      rel="stylesheet" />
+  </head>
+
+  <body>
+    <header class="header">
+      <section class="headerMarca">
+        <h1 class="h1_marca">Camels Jewelry</h1>
+      </section>
+      <nav class="navMenu">
+        <div class="containerMenu">
+          <ul class="menuLista">
+            <li class="btnMenu"><a href="index.html">Home</a></li>
+            <li class="btnMenu"><a href="anillos.html">Anillos</a></li>
+            <li class="btnMenu"><a href="aretes.html">Aretes</a></li>
+            <li class="btnMenu"><a href="cadenas.html">Cadenas</a></li>
+            <li class="btnMenu"><a href="dijes.html">Dijes</a></li>
+            <li class="btnMenu"><a href="pulseras.html">Pulseras</a></li>
+            <li class="btnMenu">
+              <a href="tablaDeMedidas.html">Tabla de Medidas</a>
+            </li>
+            <li class="btnMenu">
+              <a href="sobreNosotros.html">Sobre Nosotros</a>
+            </li>
+            <li class="btnMenu"><a href="contactanos.html">Contactanos</a></li>
+          </ul>
+        </div>
+        <a href="compra.html"
+          ><img
+            class="btn-carritoCompras"
+            src="img/carritoDeComprasCamels.png"
+            alt="Carrito de compras"
+        /></a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="sectionBuscar">
+        <div class="containerHorizontalTitulos">
+          <div class="containerTituloCategoria">
+            <h1 class="tituloCategoria">Dijes</h1>
+          </div>
+          <div class="h2_containerTituloBuscador">
+            <h2 class="tituloBuscador"></h2>
+          </div>
+          <div class="containerBuscador">
+            <div class="containerBotonMenuBuscador">
+              <button class="dropdown-btn" id="dropdown-btn" type="menu" >
+                <img src="img/botonDesplegableMenu.png" alt="Menu" />
+              </button>
+            </div>
+            <div class="containerMenuBuscador">
+              <ul class="menuListaBuscador">
+                <li class="btnMenu"><a href="anillos.html">Anillos</a></li>
+                <li class="btnMenu"><a href="aretes.html">Aretes</a></li>
+                <li class="btnMenu"><a href="cadenas.html">Cadenas</a></li>
+                <li class="btnMenu"><a href="dijes.html">Dijes</a></li>
+                <li class="btnMenu"><a href="pulseras.html">Pulseras</a></li>
+                <li class="btnMenu"><a href="anillos.html">Anillos</a></li>
+                <li class="btnMenu"><a href="aretes.html">Aretes</a></li>
+                <li class="btnMenu"><a href="cadenas.html">Cadenas</a></li>
+                <li class="btnMenu"><a href="dijes.html">Dijes</a></li>
+                <li class="btnMenu"><a href="pulseras.html">Pulseras</a></li>
+              </ul>
+            </div>
+            <form class="formBuscador" action="/buscar" method="GET">
+              <input
+                class="inputBuscador"
+                type="text"
+                placeholder="Buscar productos..."
+                name="search" />
+              <button class="btnBuscador" type="submit">
+                <img class="lupaBuscar" src="img/lupa.png" alt="Buscar" />
+              </button>
+            </form>
+          </div>
+        </div>
+        <nav class="menu2">
+          <a href="index.html">Oro</a>
+          <a href="destacados.html">Plata</a>
+        </nav>
+      </section>
+      <section>
+        <div class="galleryAnillos">
+            <img src="img/imgcadenas/cadenaOro.png" alt="cadenaOro">
+            <img src="img/imgcadenas/cadenaOro2.png" alt="cadenaOro">
+            <img src="img/imgcadenas/cadenaOro3.png" alt="cadenaOro">
+            <img src="img/imgcadenas/cadenaOro4.png" alt="cadenaOro">
+            <img src="img/imgcadenas/cadenaOroCorazon.png" alt="cadenaOro">
+            <img src="img/imgcadenas/cadenaOroCorazon2.png" alt="cadenaOro">
+            <img src="img/imgcadenas/cadenaPlata.png" alt="cadenaPlata">
+            <img src="img/imgcadenas/cadenaPlata2.png" alt="cadenaPlata">
+            <img src="img/imgcadenas/cadenaPlata3.png" alt="cadenaPlata">
+        </div>
+      </section>
+      
+    </main>
+
+    <footer class="footer">
+      <div class="containerFooterContacto">
+        <p>joyeriayrelojeriacamels@gmail.com  |  Cel: 3003920237</p>
+      </div>
+      <div class="containerFooterPagos">
+        <p>
+          Pagos: 
+        </p>
+        <img class="imagenesFooter" src="img/logoPSE.png" alt="PSE" />
+          <img
+            class="imagenesFooter"
+            src="img/masterCardLogo.png"
+            alt="Master Card" />
+          <img class="imagenesFooter" src="img/visaLogo.png" alt="Visa" />
+      </div>
+      <div class="containerFooterAuthor"><p>©2024 Dev Michael Varela G.</p></div>
+    </footer>
+    <script src="Js/script.js"></script>
+  </body>
+</html>
